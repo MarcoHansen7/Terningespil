@@ -10,10 +10,10 @@ public class Main {
         for (int i=0; i <1000 ;i++ ) {
             Random forste = new Random();
             dice1 = forste.nextInt(6);
-            dice1++;
+                dice1++;
             Random anden = new Random();
             dice2 = anden.nextInt(6);
-            dice2++;
+                dice2++;
             sum1 = (dice1+dice2);
             opdel [i]=sum1;
             System.out.println("du slog " + dice1 + " og " + dice2 + " din sum er: " + sum1);
