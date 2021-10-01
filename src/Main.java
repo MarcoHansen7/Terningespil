@@ -1,139 +1,43 @@
-package com.company;
-import java.util.Random;
 import java.util.Arrays;
+import java.util.Random;
 import java.util.Scanner;
-
 public class Main {
 
-    public static int dice1, dice2, sum1, dice3, dice4, sum2, turStarter, spilStarter;
-    public static int total1 = (dice1 + dice2);
-    public static int total2 = (dice3 + dice4);
-    public static String player1, player2, starter, slutter;
-
     public static void main(String[] args) {
-
-        velkommen();
-        tStarter();
-        kast();
-    }
-
-    static void velkommen() {
         Scanner sc = new Scanner(System.in);
-
-        System.out.println("Velkommen til Dice Game!");
-
-        System.out.println("Player 1 - Intast navn: ");
-        player1 = sc.nextLine();
-        System.out.println("Hej " + player1);
-
-        System.out.println("Player 2 - Intast navn: ");
-        player2 = sc.nextLine();
-        System.out.println("Hej " + player2);
-    }
-
-    static void tStarter() {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Hvem starter med at spille? 1 = " + player1 + " og 2 = " + player2);
-
-        loop:
-        while (true) {
-
-            turStarter = sc.nextInt();
-
-            switch (turStarter) {
-                case 1:
-                    System.out.println(player1 + " starter");
-                    starter = player1;
-                    slutter = player2;
-                    break loop;
-
-                case 2:
-                    System.out.println(player2 + " starter");
-                    starter = player2;
-                    slutter = player1;
-                    break loop;
-
-                default:
-                    System.out.println("Prøv igen ven");
-                    System.out.print("1 = " + player1 + " starter");
-                    System.out.println(" og 2 = " + player2 + " starter");
-                    break;
-            }
-
+        int dice1, dice2, sum1, sumTotal;
+        int[] opdel = new int[1000];
+        for (int i=0; i <1000 ;i++ ) {
+            Random forste = new Random();
+            dice1 = forste.nextInt(6);
+            dice1++;
+            Random anden = new Random();
+            dice2 = anden.nextInt(6);
+            dice2++;
+            sum1 = (dice1+dice2);
+            opdel [i]=sum1;
+            System.out.println("du slog " + dice1 + " og " + dice2 + " din sum er: " + sum1);
         }
-    }
+
+        System.out.println(Arrays.toString(opdel));
+
+        System.out.println("Indtast det tal du vil se hyppigheden på");
+            int x = sc.nextInt();
+                int gange=0;
 
 
-    static void spiller1tur() {
-        Random forste = new Random();
-        dice1 = forste.nextInt(6);
-        dice1++;
-
-        Random anden = new Random();
-        dice2 = anden.nextInt(6);
-        dice2++;
-
-        sum1 = (dice1 + dice2);
-        total1 += (dice1 + dice2);
-
-        System.out.println(starter + " slog " + dice1 + " og " + dice2 + " din sum er: " + sum1 + " og din total er. " + total1);
-    }
-
-    static void spiller2tur() {
-        Random forste = new Random();
-        dice3 = forste.nextInt(6);
-        dice3++;
-
-        Random anden = new Random();
-        dice4 = anden.nextInt(6);
-        dice4++;
-
-        sum2 = (dice3 + dice4);
-        total2 += (dice3 + dice4);
-
-        System.out.println(slutter + " slog " + dice3 + " og " + dice4 + " din sum er: " + sum2 + " og din total er. " + total2);
-    }
-
-    static void kast() {
-        System.out.println("Nu starter spillet, Tryk 'Any Key + Enter' for at start");
-        Scanner sc = new Scanner(System.in);
-        //spilStarter = sc.nextInt();
-
-        loop:
-        while (true) {
-            //sc.nextLine();
-            //spilStarter = sc.nextInt();
-            //switch (spilStarter) {
-            sc.nextLine();
-            //  case 9:
-            spiller1tur();
-            System.out.println("GODT kastet " + starter);
-            // System.out.println(slutter + " tryk på 'Enter' for at forsætte.");
-            // sc.nextLine();
-
-            if (total1 >= 40)
+        for(int i=0;i<1000;i++) {           //vi laver et for loop med en if-statement for som
+            if (x==opdel[i])
             {
-                System.out.println(starter + " Har VUNDET!!!!");
-                break loop;
+                gange++;
             }
-
-            System.out.println(slutter + " tryk på 'Enter' for at forsætte.");
-            sc.nextLine();
-
-
-            //spilStarter = sc.nextInt();
-            spiller2tur();
-            System.out.println("GODT kastet " + slutter);
-            //System.out.println(starter + " tryk på 'Enter' for at forsætte.");
-
-            if (total2 >= 40)
-            {
-                System.out.println(slutter + " Har VUNDET!!!!");
-                break loop;
-            }
-            //   break;
-            System.out.println(starter + " tryk på 'Enter' for at forsætte.");
-            //}
         }
+
+        System.out.println(x+" optrådte "+gange+" gange ");
+
+
     }
+
 }
+
+
