@@ -125,7 +125,7 @@ public class Main {
 
             if (total1 >= 40)
             {
-                System.out.println(starter + " Har VUNDET!!!!");
+                System.out.println("*** " + starter + " Har VUNDET!!!! ***");
                 break loop;
             }
 
@@ -140,7 +140,7 @@ public class Main {
 
             if (total2 >= 40)
             {
-                System.out.println(slutter + " Har VUNDET!!!!");
+                System.out.println("*** " + slutter + " Har VUNDET!!!! ***");
                 break loop;
             }
             //   break;
