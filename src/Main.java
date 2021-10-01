@@ -22,11 +22,11 @@ public class Main {
 
         System.out.println("Velkommen til Dice Game!");
 
-        System.out.println("Player 1 - Intast navn: ");
+        System.out.println("Player 1 - Indtast navn: ");
         player1 = sc.nextLine();
         System.out.println("Hej " + player1);
 
-        System.out.println("Player 2 - Intast navn: ");
+        System.out.println("Player 2 - Indtast navn: ");
         player2 = sc.nextLine();
         System.out.println("Hej " + player2);
     }
