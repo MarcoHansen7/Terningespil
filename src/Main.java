@@ -1,4 +1,3 @@
-package com.company;
 import java.util.Random;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -15,6 +14,7 @@ public class Main {
         velkommen();
         tStarter();
         kast();
+
     }
 
     static void velkommen() {
@@ -22,11 +22,11 @@ public class Main {
 
         System.out.println("Velkommen til Dice Game!");
 
-        System.out.println("Player 1 - Intast navn: ");
+        System.out.println("Player 1 - Indtast navn: ");
         player1 = sc.nextLine();
         System.out.println("Hej " + player1);
 
-        System.out.println("Player 2 - Intast navn: ");
+        System.out.println("Player 2 - Indtast navn: ");
         player2 = sc.nextLine();
         System.out.println("Hej " + player2);
     }
@@ -76,6 +76,12 @@ public class Main {
         sum1 = (dice1 + dice2);
         total1 += (dice1 + dice2);
 
+        if (sum1 == 2)
+        {
+            total1 = 0;
+            System.out.println("Hahahaha du slog 2x1");
+        }
+
         System.out.println(starter + " slog " + dice1 + " og " + dice2 + " din sum er: " + sum1 + " og din total er. " + total1);
     }
 
@@ -90,6 +96,12 @@ public class Main {
 
         sum2 = (dice3 + dice4);
         total2 += (dice3 + dice4);
+
+        if (sum2 == 2)
+        {
+            total2 = 0;
+            System.out.println("Hahahaha du slog 2x1");
+        }
 
         System.out.println(slutter + " slog " + dice3 + " og " + dice4 + " din sum er: " + sum2 + " og din total er. " + total2);
     }
