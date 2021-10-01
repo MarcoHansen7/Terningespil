@@ -127,11 +127,11 @@ public class Main {
 
             if (total1 >= 40)
             {
-                System.out.println(starter + " Har VUNDET!!!!");
+                System.out.println("*** " + starter + " Har VUNDET!!!! ***");
                 break loop;
             }
 
-            System.out.println(slutter + " tryk på 'Enter' for at spille videre.");
+            System.out.println(slutter + " Tryk på 'Enter' for at spille videre.");
             sc.nextLine();
 
 
@@ -142,11 +142,11 @@ public class Main {
 
             if (total2 >= 40)
             {
-                System.out.println(slutter + " Har VUNDET!!!!");
+                System.out.println("*** " + slutter + " Har VUNDET!!!! ***");
                 break loop;
             }
             //   break;
-            System.out.println(starter + " tryk på 'Enter' for at spille videre.");
+            System.out.println(starter + " Tryk på 'Enter' for at spille videre.");
             //}
         }
     }
