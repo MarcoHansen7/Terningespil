@@ -54,7 +54,7 @@ public class Main {
                     break loop;
 
                 default:
-                    System.out.println("Prøv igen ven");
+                    System.out.println("Proev igen ven");
                     System.out.print("1 = " + player1 + " starter");
                     System.out.println(" og 2 = " + player2 + " starter");
                     break;
@@ -107,7 +107,7 @@ public class Main {
     }
 
     static void kast() {
-        System.out.println("Nu starter spillet, Tryk 'Any Key + Enter' for at start");
+        System.out.println("Nu starter spillet, Tryk 'Any Key + Enter' for at starte");
         Scanner sc = new Scanner(System.in);
         //spilStarter = sc.nextInt();
 
@@ -120,7 +120,7 @@ public class Main {
             //  case 9:
             spiller1tur();
             System.out.println("GODT kastet " + starter);
-            // System.out.println(slutter + " tryk på 'Enter' for at forsætte.");
+            // System.out.println(slutter + " tryk på 'Enter' for at spille videre.");
             // sc.nextLine();
 
             if (total1 >= 40)
@@ -129,14 +129,14 @@ public class Main {
                 break loop;
             }
 
-            System.out.println(slutter + " tryk på 'Enter' for at forsætte.");
+            System.out.println(slutter + " tryk på 'Enter' for at spille videre.");
             sc.nextLine();
 
 
             //spilStarter = sc.nextInt();
             spiller2tur();
             System.out.println("GODT kastet " + slutter);
-            //System.out.println(starter + " tryk på 'Enter' for at forsætte.");
+            //System.out.println(starter + " tryk på 'Enter' for at spille videre.");
 
             if (total2 >= 40)
             {
@@ -144,7 +144,7 @@ public class Main {
                 break loop;
             }
             //   break;
-            System.out.println(starter + " tryk på 'Enter' for at forsætte.");
+            System.out.println(starter + " tryk på 'Enter' for at spille videre.");
             //}
         }
     }
