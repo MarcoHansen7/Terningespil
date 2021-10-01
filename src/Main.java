@@ -129,7 +129,7 @@ public class Main {
                 break loop;
             }
 
-            System.out.println(slutter + " tryk på 'Enter' for at spille videre.");
+            System.out.println(slutter + " Tryk på 'Enter' for at spille videre.");
             sc.nextLine();
 
 
@@ -144,7 +144,7 @@ public class Main {
                 break loop;
             }
             //   break;
-            System.out.println(starter + " tryk på 'Enter' for at spille videre.");
+            System.out.println(starter + " Tryk på 'Enter' for at spille videre.");
             //}
         }
     }
