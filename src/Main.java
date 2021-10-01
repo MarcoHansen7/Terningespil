@@ -79,7 +79,7 @@ public class Main {
         if (sum1 == 2)
         {
             total1 = 0;
-            System.out.println("Hahahaha du slog 2x1");
+            System.out.println("Hahahaha du slog 2x1, dine point er blevet nulstillet");
         }
 
         System.out.println(starter + " slog " + dice1 + " og " + dice2 + " din sum er: " + sum1 + " og din total er. " + total1);
@@ -100,7 +100,7 @@ public class Main {
         if (sum2 == 2)
         {
             total2 = 0;
-            System.out.println("Hahahaha du slog 2x1");
+            System.out.println("Hahahaha du slog 2x1, dine point er blevet nulstillet");
         }
 
         System.out.println(slutter + " slog " + dice3 + " og " + dice4 + " din sum er: " + sum2 + " og din total er. " + total2);
